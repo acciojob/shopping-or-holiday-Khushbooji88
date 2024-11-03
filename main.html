@@ -1,78 +1,26 @@
-<!DOCTYPE html>
-<html lang=“en”>
+<html>
 
 <head>
-<meta charset=“UTF-8”>
-<meta name=“viewport” content=“width=device-width, initial-scale=1.0”>
-<title>Shopping or Holiday Assignment</title>
-<style>
-table {
-width: 100%;
-border-collapse: collapse;
-}
-
-    th,
-    td {
-        border: 1px solid black;
-        padding: 10px;
-    }
-
-    th {
-        background-color: #f2f2f2;
-    }
-
-    .highlight {
-        font-weight: bold;
-    }
-</style>
+<link rel=“stylesheet” href=“styles.css”>
 </head>
+
 <body>
-<h1>Shopping or Holiday</h1>
-<p>Let’s make some of our own using HTML lists. Make 2 lists identifying the use of the money you’ll make from the job.</p>
-<h2>Acceptance Criteria:</h2>
-<table>
-<tr>
-<th>Requirement</th>
-<th>Description</th>
-</tr>
-<tr>
-<td class=“highlight”>Ordered List</td>
-<td>Create an <code>ordered list</code> of <code>3</code> items that you’d like to buy with your salary.
-This list should have <code>data-ns-test</code> attribute in the <code>li</code> element and
-value of the attribute should be <code>shoppingList</code>.</td>
-</tr>
-<tr>
-<td class=“highlight”>Unordered List</td>
-<td>Create an <code>unordered list</code> of the holiday destinations that you’d like to visit after you got
-a job. It should at least have <code>3</code> places. This list should have <code>data-ns-test</code>
-attribute in the <code>li</code> element and value of the attribute should be
-<code>holidayList</code>.</td>
-</tr>
-</table>
-<h2>Extra Info:</h2>
-<h3>Understanding Custom Attributes</h3>
-<p>- In HTML, you can define your own attributes for the majority of elements using the <code>data-*</code> prefix. Any attribute on an element whose attribute name starts with <code>data-</code> is a data attribute.</p>
-<p>- In the context of this task, <code>data-ns-test=‘shoppingList’</code> and <code>data-ns-test=‘holidayList’</code> are examples of custom attributes. These attributes allow you to store extra information that doesn’t have any visual representation. Custom attributes are mainly used to store information within HTML tags, which can later be accessed and manipulated using JavaScript or similar technologies.</p>
-<p>- The value inside the custom attribute can be anything that suits your needs, in this case, identifying two different types of lists.</p>
+<!-- the entire body must be written by student -->
+<script type=“text/javascript” src=“./script.js”>
+</script>
+<h1>My Shopping and Holiday List</h1>
+    <h2>Things to buy with my salary:</h2>
+    <ol>
+        <li data-ns-test="shoppingList">Item 1</li>
+        <li data-ns-test="shoppingList">Item 2</li>
+        <li data-ns-test="shoppingList">Item 3</li>
+    </ol>
+    <h2>Holiday destinations:</h2>
+    <ul>
+        <li data-ns-test="holidayList">Place 1</li>
+        <li data-ns-test="holidayList">Place 2</li>
+        <li data-ns-test="holidayList">Place 3</li>
+    </ul>
 </body>
-<!–/// <reference types=“cypress” />
-const baseUrl = “http://localhost:3000”;
-describe(“example to-do app”, () => {
-beforeEach(() => { cy.visit(baseUrl); });
-it(‘checking unordered list’, () => {
-cy.visit(baseUrl + “/main.html”);
-cy.get(‘ul’).children().should(‘have.length’,3);
-[0, 1, 2].forEach(i => {
-cy.get(“[data-ns-test=‘holidayList’]”).eq(i).then(span => { expect(span.text().length).to.gt(0); });
-});
-});
-it(‘checking ordered list’, () => {
-cy.visit(baseUrl + “/main.html”);
-cy.get(‘ol’).children().should(‘have.length’,3);
-[0, 1, 2].forEach(i => {
-cy.get(“[data-ns-test=‘shoppingList’]”).eq(i).then(span => { expect(span.text().length).to.gt(0); });
-});
-});
-});
-–>
+
 </html>
